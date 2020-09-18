@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fleet Management</title>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <section class="menu">
+    <!-- title -->
+    <div class="title">
+      <h2>Fleet Management Assignment</h2>
+      <div class="underline"></div>
+    </div>
+
+
+    <!-- Gallery items -->
+    <nav>
+      <ul class='tabs'>
+        <li class='active' data-tab-id='tab1' id="mGallery">Master Gallery</li>
+        <li data-tab-id='tab2' id="pGallery">Personal Gallery</li>
+      </ul>
+    </nav>
+
+    <div class='content-section'>
+      <div id='tab1' class='tab content active'>
+        <div class="container">
+          <div id="loader"></div>
+          <div class="section-center">
+          </div>
+          <div class="btn-container" style="display: none;">
+            <button type="button" class="save-btn btn">Save</button>
+          </div>
+        </div>
+      </div>
+      <div id='tab2' class='tab content'>
+        <div class="myGallery">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- javascript -->
+  <script src="app.js"></script>
+</body>
+
+</html>
