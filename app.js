@@ -1,7 +1,7 @@
  
 
 //tabs
-var d = document,
+const d = document,
   tabs = d.querySelector('.tabs'),
   tab = d.querySelectorAll('li'),
   contents = d.querySelectorAll('.content');
@@ -28,10 +28,10 @@ const buttonContainer = document.querySelector(".btn-container");
 const myGallery = document.querySelector(".myGallery");
 const saveItem = document.querySelector(".save-btn");
 // Variables
-let galleryAPI = 'https://collectionapi.metmuseum.org/public/collection/v1/objects';
+const galleryAPI = 'https://collectionapi.metmuseum.org/public/collection/v1/objects';
 let personalGalleryArr = [];  
 let promiseArray = [];
-const galleryArr = [];
+let galleryArr = [];
 
 // display all items when page loads
 window.addEventListener("DOMContentLoaded", function () {
@@ -71,8 +71,8 @@ function loadGallery() {
 
 async function getAllElements(data) {
   //limiting the details to 25 records
-  const galleryDetailIds = data.objectIDs.splice(0, 25);
-  for (var i = 1; i < galleryDetailIds.length; i++) {
+  const galleryDetailIds = data.objectIDs.slice(0, 25);
+  for (let i = 1; i < galleryDetailIds.length; i++) {
     promiseArray.push(fetch(galleryAPI+'/'+ i));
   }
   return promiseArray;
@@ -123,7 +123,7 @@ function moveToPersonalGallery(selectedEle){
   myArray = [...galleryArr].filter((obj) => {
     return obj.objectID == galleryId;
   });
-  var el = personalGalleryArr.filter((obj) => {
+  let el = personalGalleryArr.filter((obj) => {
     return obj.objectID == galleryId;
   });
   if (el.length) {

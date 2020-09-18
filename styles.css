@@ -221,7 +221,7 @@ Menu
 .tabs li.active {
   border: 1px solid #ccc;
   border-bottom: none;
-  background: grey;
+  background: var(--clr-primary-6);
   color:white;  
  
 }
@@ -297,7 +297,7 @@ Menu
   margin: -75px 0 0 -75px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid var(--clr-gold);;
+  border-top: 16px solid var(--clr-gold);
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
@@ -314,37 +314,11 @@ Menu
   100% { transform: rotate(360deg); }
 }
 
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-}
-
 .content {
   display: none;
   opacity: 0;
   width: 100%;
   height: 100%;
-  -webkit-animation: display-none-transition 1s ease;
-  animation: display-none-transition 1s ease;
 }
 
  
@@ -364,7 +338,7 @@ li {
   padding: 10px 0;
   margin-right: -4px;
   text-align: center;
-  border:1px solid gray;
+  border:1px solid var(--clr-primary-6);
   border-bottom: 0;
   border-radius: 4px 4px 0 0; 
 }
